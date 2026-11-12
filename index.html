@@ -8,24 +8,82 @@
   <script src="./script.js" defer></script>
 </head>
 <body>
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+
   <header class="site-header">
-    <span class="brand">Spotify</span>
+    <div class="header-inner">
+      <a href="#main" class="brand" aria-label="Spotify Inicio">
+        <span class="brand-icon" aria-hidden="true">♪</span>
+        <span>Spotify</span>
+      </a>
+    </div>
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="titulo-principal">
-      <div class="hero-content">
-        <h1 id="titulo-principal">Música para todos.</h1>
-        <p class="subtitle">Millones de canciones. Sin tarjeta de crédito.</p>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="badge-simulated">Prototipo académico · Registro simulado (Sin servidor)</span>
+        <h1 id="hero-title">Música para todos.</h1>
+        <p class="hero-subtitle">
+          Millones de canciones y pódcasts. Sin tarjeta de crédito para comenzar tu prueba gratuita.
+        </p>
+        <ul class="benefits-list">
+          <li><span class="check-badge" aria-hidden="true">✓</span> Navegable al 100% con teclado (Tab, Enter y Espacio).</li>
+          <li><span class="check-badge" aria-hidden="true">✓</span> Contraste verificado bajo estándar WCAG 2.2 Nivel AA.</li>
+          <li><span class="check-badge" aria-hidden="true">✓</span> Estados anunciados con atributos ARIA y región viva.</li>
+        </ul>
       </div>
 
-      <div class="hero-action">
-        <button type="button" class="btn-primary" id="btn-registro">
+      <form id="form-registro" class="signup-card" novalidate>
+        <h2>Comienza tu registro</h2>
+
+        <fieldset>
+          <legend>1. Elige tu modalidad de cuenta</legend>
+          <label class="plan-option">
+            <span>
+              <input type="radio" name="plan" value="Gratis" checked>
+              Spotify Free
+            </span>
+            <span class="plan-tag">S/ 0 al mes</span>
+          </label>
+          <label class="plan-option">
+            <span>
+              <input type="radio" name="plan" value="Universitario">
+              Premium Universitario
+            </span>
+            <span class="plan-tag">1 mes gratis</span>
+          </label>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="email">2. Correo electrónico (opcional para prueba rápida)</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="ejemplo@upc.edu.pe"
+            aria-invalid="false"
+            aria-describedby="email-error"
+          >
+          <p id="email-error" class="error-msg" hidden>
+            Ingresa un correo electrónico con formato válido (ej. nombre@correo.com).
+          </p>
+        </div>
+
+        <button type="submit" class="btn-primary" id="btn-registro">
           Regístrate gratis
         </button>
+
         <p id="mensaje" role="status" aria-live="polite"></p>
-      </div>
+
+        <button type="button" class="btn-secondary hidden" id="btn-reiniciar">
+          Reiniciar demostración
+        </button>
+      </form>
     </section>
   </main>
+
+  <footer class="site-footer">
+    Prototipo de demostración para 1ASI0784 - HCI UX for Design (Semana 12: Accesibilidad y Despliegue).
+  </footer>
 </body>
 </html>

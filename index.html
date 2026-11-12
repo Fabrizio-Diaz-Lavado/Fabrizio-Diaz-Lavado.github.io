@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify - Landing page</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#main" class="brand" aria-label="Spotify Inicio">
+        <span class="brand-icon" aria-hidden="true">♪</span>
+        <span>Spotify</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="badge">Sin tarjeta de crédito · Prueba gratuita</span>
+        <h1 id="hero-title">Música para todos.</h1>
+        <p class="hero-subtitle">
+          Millones de canciones y pódcasts. Disfruta tu música favorita desde cualquier dispositivo.
+        </p>
+      </div>
+
+      <div class="signup-card">
+        <h2>Comienza tu registro</h2>
+        <p class="card-note">Activa tu cuenta gratuita con un solo clic.</p>
+
+        <button type="button" class="btn-primary" id="btn-registro">
+          Regístrate gratis
+        </button>
+
+        <p id="mensaje" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
